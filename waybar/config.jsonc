@@ -9,7 +9,9 @@
     "margin-left": 8,
 
     "modules-left": [
-        "hyprland/workspaces"
+        "custom/arch",
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
 
     "modules-center": [
@@ -26,6 +28,22 @@
         "network",
         "pulseaudio"
     ],
+
+  "custom/arch": {
+    "format": "󰣇",
+        "tooltip": false
+  },
+
+"hyprland/window": {
+    "format": "󰣆   {title}",
+    "max-length": 30,
+    "separate-outputs": false,
+    "rewrite": {
+      "^.*( — Firefox| - Mozilla Firefox|Firefox)$": " Firefox",
+      "^.*~$": "   Kitty",
+      "(.*) ": "   Empty"
+    },
+  },
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -45,7 +63,8 @@
 
     "custom/weather": {
       "interval": 600,
-      "exec": "python -O ~/Weather/weather.py"
+      "exec": "python -O ~/Weather/weather.py",
+        "tooltip": false
     },
 
     "cpu": {

@@ -1,0 +1,45 @@
+[2025-04-21 23:24:52.993] [info] Using configuration file /home/zerrox/.config/waybar/config.jsonc
+[2025-04-21 23:24:52.994] [error] Error parsing JSON: * Line 34, Column 9
+  Missing ',' or '}' in object declaration
+
+[2025-04-21 23:25:14.286] [info] Using configuration file /home/zerrox/.config/waybar/config.jsonc
+[2025-04-21 23:25:14.288] [info] Discovered appearance 'dark'
+[2025-04-21 23:25:14.288] [info] Using CSS file /home/zerrox/.config/waybar/style.css
+[2025-04-21 23:25:14.295] [info] Hyprland IPC starting
+[2025-04-21 23:25:14.296] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-04-21 23:25:14.299] [warning] module cpu_text: Unknown module: cpu_text
+[2025-04-21 23:25:14.299] [warning] No batteries.
+[2025-04-21 23:25:14.442] [info] Bar configured (width: 1904, height: 40) for output: HDMI-A-1
+
+** (waybar:24343): WARNING **: 23:27:59.028: Status Notifier Item with bus name ':1.308' and object path '/StatusNotifierItem' is already registered
+
+** (waybar:24343): WARNING **: 23:27:59.031: Status Notifier Host with bus name ':1.342' and object path '/StatusNotifierHost/0' is already registered
+
+(waybar:24343): LIBDBUSMENU-GLIB-WARNING **: 23:40:36.411: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:24343): LIBDBUSMENU-GLIB-WARNING **: 23:40:38.980: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:24343): LIBDBUSMENU-GLIB-WARNING **: 23:40:39.006: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:24343): LIBDBUSMENU-GTK-WARNING **: 23:41:05.463: Children but no menu, someone's been naughty with their 'children-display' property: 'submenu'
+
+(waybar:24343): LIBDBUSMENU-GTK-WARNING **: 23:41:05.464: Children but no menu, someone's been naughty with their 'children-display' property: 'submenu'
+
+(waybar:24343): LIBDBUSMENU-GTK-WARNING **: 23:41:05.464: Children but no menu, someone's been naughty with their 'children-display' property: 'submenu'
+
+(waybar:24343): LIBDBUSMENU-GLIB-WARNING **: 23:41:05.475: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:24343): LIBDBUSMENU-GLIB-WARNING **: 23:41:06.918: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:24343): LIBDBUSMENU-GTK-WARNING **: 23:41:06.919: Children but no menu, someone's been naughty with their 'children-display' property: 'submenu'
+
+(waybar:24343): LIBDBUSMENU-GTK-WARNING **: 23:41:06.919: Children but no menu, someone's been naughty with their 'children-display' property: 'submenu'
+
+(waybar:24343): LIBDBUSMENU-GTK-WARNING **: 23:41:06.920: Children but no menu, someone's been naughty with their 'children-display' property: 'submenu'
+
+(waybar:24343): LIBDBUSMENU-GLIB-WARNING **: 23:41:06.927: Group Properties error: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: No such object path '/MenuBar'
+
+(waybar:24343): LIBDBUSMENU-GLIB-WARNING **: 23:41:06.927: Unable to replace properties on 0: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: No such object path '/MenuBar'
+
+(waybar:24343): LIBDBUSMENU-GLIB-WARNING **: 23:41:06.928: Group Properties error: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: No such object path '/MenuBar'
+Gdk-Message: 00:32:12.351: Error reading events from display: Vastapää sulki yhteyden
