@@ -1,20 +1,20 @@
 * {
-    border: none;
-    min-height: 0;
-    font-family: "iosevka nerd font", "Noto Sans", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 4px;
+        border: none;
+        min-height: 0;
+        font-family: "iosevka nerd font", "Noto Sans", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 4px;
 }
 
 window#waybar {
-    background: #1d2021;
-    border: 2px solid #3c3836;
+        background: #1d2021;
+        border: 2px solid #3c3836;
 }
 
 tooltip {
-    background-color: #1d2021;
-    border: 2px solid #7c6f64;
+        background-color: #1d2021;
+        border: 2px solid #7c6f64;
 }
 
 #clock,
@@ -26,67 +26,67 @@ tooltip {
 #custom-weather,
 #window,
 #pulseaudio {
-    margin: 6px 6px 6px 0px;
-    padding: 2px 8px;
+        margin: 6px 6px 6px 0px;
+        padding: 2px 8px;
 }
 
 #window,
 #workspaces {
-    background-color: #303536;
-    margin: 6px 0px 6px 6px;
-    border: 2px solid #434a4c;
+        background-color: #303536;
+        margin: 6px 0px 6px 6px;
+        border: 2px solid #434a4c;
 }
 
 #window {
-  color: #c7ab7a;
+        color: #c7ab7a;
 }
 
 #custom-arch {
-  margin: 6px 4px 6px 10px;
-  color: #c7ab7a;
+        margin: 6px 4px 6px 10px;
+        color: #c7ab7a;
 }
 
 #workspaces button {
-    all: initial;
-    min-width: 0;
-    box-shadow: inset 0 -3px transparent;
-    padding: 2px 4px;
-    color: #c7ab7a;
+        all: initial;
+        min-width: 0;
+        box-shadow: inset 0 -3px transparent;
+        padding: 2px 4px;
+        color: #c7ab7a;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-    background-color: #7C6F64;
+        background-color: #7C6F64;
 }
 
 
 #workspaces button.urgent {
-    background-color: #e78a4e;
+        background-color: #e78a4e;
 }
 
 #custom-weather,
 #clock {
-    background-color: #303536;
-    border: 2px solid #434a4c;
-    color: #d4be98;
+        background-color: #303536;
+        border: 2px solid #434a4c;
+        color: #d4be98;
 }
 
 #cpu,
 #memory,
 #network,
 #pulseaudio {
-  min-width: 50px;
-  color: #d4be98;
+        min-width: 50px;
+        color: #d4be98;
 }
 
 
 #cpu.critical,
 #memory.critical {
-    color: #c14a4a;
+        color: #c14a4a;
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-    color: #c14a4a;
+        color: #c14a4a;
 }
