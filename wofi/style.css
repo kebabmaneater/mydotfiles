@@ -1,39 +1,55 @@
+@define-color dark1 #2e3440;
+@define-color dark2 #3b4252;
+@define-color dark3 #434c5e;
+@define-color dark4 #4c566a;
+@define-color light1 #d8dee9;
+@define-color light2 #e5e9f0;
+@define-color light3 #eceff4;
+@define-color blue1 #8fbcbb;
+@define-color blue2 #88c0d0;
+@define-color blue1 #81a1c1;
+@define-color blue4 #5e81ac;
+@define-color red #bf616a;
+@define-color orange #d08770;
+@define-color yellow #ebcb8b;
+@define-color green #a3be8c;
+@define-color purple #b48ead;
+
 window {
-margin: 0px;
-border: 1px solid #928374;
-background-color: #282828;
+        margin: 0px;
+        background-color: @dark1;
 }
 
 #input {
-margin: 5px;
-border: none;
-color: #ebdbb2;
-background-color: #1d2021;
+        margin: 5px;
+        border: none;
+        color: @blue1;
+        background-color: @dark2;
 }
 
 #inner-box {
-margin: 5px;
-border: none;
-background-color: #282828;
+        margin: 5px;
+        border: none;
+        background-color: @dark1;
 }
 
 #outer-box {
-margin: 5px;
-border: none;
-background-color: #282828;
+        margin: 5px;
+        border: none;
+        background-color: @dark1;
 }
 
 #scroll {
-margin: 0px;
-border: none;
+        margin: 0px;
+        border: none;
 }
 
 #text {
-margin: 5px;
-border: none;
-color: #ebdbb2;
+        margin: 5px;
+        border: none;
+        color: @blue1;
 }
 
 #entry:selected {
-background-color: #1d2021;
+        background-color: @dark2;
 }
