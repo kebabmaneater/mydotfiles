@@ -22,12 +22,11 @@
         font-family: "iosevka nerd font", "Noto Sans", sans-serif;
         font-weight: 500;
         font-size: 14px;
-        border-radius: 10px;
 }
 
 window#waybar {
         background: @dark1;
-        border: 3px solid @dark2;
+        border-bottom: 3px solid @dark2;
 }
 
 tooltip {
@@ -71,7 +70,6 @@ tooltip {
         padding: 2px 4px;
         color: @blue1;
         margin: 0px 2px;
-        border-radius: 10px;
 }
 
 #workspaces button.active,

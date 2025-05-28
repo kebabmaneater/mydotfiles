@@ -17,18 +17,15 @@
 
 window {
         background: @dark1;
-        border: 3px solid @dark2;
-        border-radius: 10px;
+        border-right: 3px solid @dark2;
 }
 
 #box {
         /* Define attributes of the box surrounding icons here */
-        padding: 2px
 }
 
 #active {
         background-color: @dark4;
-        border-radius: 10px;
 }
 
 button,
