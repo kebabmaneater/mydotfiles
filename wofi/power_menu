@@ -1,0 +1,9 @@
+[config]
+allow_images=true
+width=400
+show=dmenu
+prompt=Power menu
+height=400
+insensitive=true
+columns=1
+no_actions=true

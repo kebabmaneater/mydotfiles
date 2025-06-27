@@ -16,7 +16,8 @@
 
     "modules-center": [
         "clock",
-        "custom/weather"
+        "custom/weather",
+        "custom/hyprsunset"
     ],
 
     "modules-right": [
@@ -31,7 +32,8 @@
 
   "custom/arch": {
     "format": "󰣇",
-        "tooltip": false
+        "tooltip": false,
+                "on-click": "bash $HOME/.config/waybar/power_menu.sh"
   },
 
 "hyprland/window": {
@@ -59,6 +61,24 @@
     "clock": {
         "format": "  {:%H.%M - %d.%m.%Y}",
         "tooltip": false
+    },
+
+    "custom/hyprsunset": {
+        "interval": "once",
+        "exec": "echo {\\\"text\\\":\\\"$(hyprctl hyprsunset temperature)\\\", \\\"alt\\\":\\\"$(($(hyprctl hyprsunset temperature) < 6500))\\\"}",
+        "return-type": "json",
+        "format": "{icon}",
+        "tooltip-format": "Hyprsunset temperature: {text}",
+        "format-icons": {
+            "1": "󰖔",
+            "0": "",
+        },
+        "on-click": "hyprctl hyprsunset temperature 2500; notify-send -a 't2' -r 91190 -t 800 'Hyprsunset On'; pkill -SIGRTMIN+10 waybar",
+        "on-click-right": "hyprctl hyprsunset identity; notify-send -a 't2' -r 91190 -t 800 'Hyprsunset Off'; pkill -SIGRTMIN+10 waybar",
+        "on-scroll-up": "hyprctl hyprsunset temperature +1000; notify-send -a 't2' -r 91190 -t 800 \"Hyprsunset Temp: $(hyprctl hyprsunset temperature)K\"; pkill -SIGRTMIN+10 waybar",
+        "on-scroll-down": "hyprctl hyprsunset temperature -1000; notify-send -a 't2' -r 91190 -t 800 \"Hyprsunset Temp: $(hyprctl hyprsunset temperature)K\"; pkill -SIGRTMIN+10 waybar",
+        "signal": 10,
+        "exec-on-event": false,
     },
 
     "custom/weather": {

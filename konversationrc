@@ -1,0 +1,58 @@
+[Aliases]
+AliasList=gauge /exec gauge,sysinfo /exec sysinfo,fortune /exec fortune,uptime /exec uptime,media /exec media,audio /exec media audio,video /exec media video,sayclip /exec sayclip,bug /exec bug,tinyurl /exec tinyurl,cmd /exec cmd
+
+[Channel 0]
+Name=#konversation
+Password=
+
+[DCC Settings]
+PanelSplitter=AAAA/wAAAAEAAAAC//////////8B/////wEAAAACAA==
+
+[Identity 0]
+AuthType=saslplain
+AutomaticAway=false
+AutomaticUnaway=false
+AwayInactivity=10
+AwayMessage=
+AwayNick=
+AwayReason=Gone away for now
+Bot=nickserv
+Codec=UTF-8
+Ident=zerrox
+InsertRememberLineOnAway=false
+KickReason=User terminated!
+Name=Oletushenkilöys
+Nicknames=zerrox,zerrox_,zerrox__
+NickservCommand=identify
+PartReason=Konversation terminated!
+Password=
+PemClientCertFile=
+PreShellCommand=
+QuitReason=Konversation terminated!
+Realname=
+ReturnMessage=
+SaslAccount=
+ShowAwayMessage=false
+
+[Server 0]
+BypassProxy=false
+Password=
+Port=6697
+SSLEnabled=true
+Server=irc.libera.chat
+
+[ServerGroup 0]
+AutoConnect=false
+AutoJoinChannels=Channel 0
+ChannelHistory=
+ConnectCommands=
+EnableNotifications=true
+Expanded=false
+Identity=Oletushenkilöys
+Name=libera
+NotifyList=
+ServerList=Server 0
+
+[ServerListDialog]
+ServerListHeaderState=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\xf4\x00\x00\x00\x03\x00\x01\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x01\x00\x00\x00\xc8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01
+Size=533,274

@@ -1,109 +1,133 @@
-@define-color dark1 #2e3440;
-@define-color dark2 #3b4252;
-@define-color dark3 #434c5e;
-@define-color dark4 #4c566a;
-@define-color light1 #d8dee9;
-@define-color light2 #e5e9f0;
-@define-color light3 #eceff4;
-@define-color blue1 #8fbcbb;
-@define-color blue2 #88c0d0;
-@define-color blue1 #81a1c1;
-@define-color blue4 #5e81ac;
-@define-color red #bf616a;
-@define-color orange #d08770;
-@define-color yellow #ebcb8b;
-@define-color green #a3be8c;
-@define-color purple #b48ead;
-
-
 * {
-        border: none;
         min-height: 0;
+        min-width: 0;
         font-family: "iosevka nerd font", "Noto Sans", sans-serif;
+        font-size: 15px;
         font-weight: 500;
-        font-size: 14px;
 }
 
 window#waybar {
-        background: @dark1;
-        border-bottom: 3px solid @dark2;
-}
-
-tooltip {
-        background-color: @dark1;
-        border: 2px solid @dark2;
-}
-
-#clock,
-#tray,
-#cpu,
-#memory,
-#battery,
-#network,
-#custom-weather,
-#window,
-#pulseaudio {
-        margin: 6px 6px 6px 0px;
-        padding: 2px 8px;
-}
-
-#window,
-#workspaces {
-        background-color: @dark2;
-        margin: 6px 0px 6px 6px;
-        border: 2px solid @dark1;
-}
-
-#window {
-        color: @blue1;
-}
-
-#custom-arch {
-        margin: 6px 4px 6px 10px;
-        color: @blue1;
+        background-color: rgba(40, 50, 60, 0.55);
+        color: #ffffff;
+        border-radius: 0px;
+        border: 1px solid rgba(40, 50, 60, 0.4);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        transition: background-color 0.5s, border 0.5s;
 }
 
 #workspaces button {
-        all: initial;
-        min-width: 0;
-        box-shadow: inset 0 -3px transparent;
-        padding: 2px 4px;
-        color: @blue1;
-        margin: 0px 2px;
+        padding: 0.3em 0.6em;
+        margin: 0px 0px;
+        border-radius: 0px;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #e0e0e0;
+        transition: background 0.3s, color 0.3s;
 }
 
-#workspaces button.active,
-#workspaces button.focused {
-        background-color: @dark4;
+#workspaces button:hover {
+        background: rgba(120, 180, 255, 0.5);
+        color: rgba(255, 255, 255, 1.0);
+        text-shadow: none;
 }
 
+#workspaces button.active {
+        background: rgba(120, 180, 255, 0.4);
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 #workspaces button.urgent {
-        background-color: @red;
+        background: rgba(255, 80, 80, 0.5);
+        color: #ffffff;
+}
+
+#clock,
+#pulseaudio,
+#custom-hyprsunset,
+#custom-arch,
+#custom-power,
+#custom-spotify,
+#custom-cmus,
+#custom-menu,
+#custom-screenshot,
+#custom-weather,
+#mpd,
+#custom-night,
+#cpu,
+#temperature,
+#network,
+#tray,
+#memory,
+#window {
+        padding: 0.3em 0.6em;
+        border-radius: 0px;
+        margin: 0px 0px;
+        background: rgba(40, 50, 60, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#custom-menu:hover {
+        background: rgba(120, 180, 255, 0.25);
+        color: #ffffff;
+}
+
+#custom-menu {
+        padding-left: 13px;
+}
+
+#custom-sep {
+        padding: 0px;
+        color: #a0a0a0;
+}
+
+#network {
+        color: #ffffff;
+}
+
+#cpu {
+        color: #ffffff;
+}
+
+#temperature {
+        color: #ffffff;
+}
+
+#memory {
+        color: #ffffff;
 }
 
 #custom-weather,
+#custom-hyprsunset,
 #clock {
-        background-color: @dark2;
-        color: @blue1;
+        color: #ffffff;
 }
 
-#cpu,
-#memory,
-#network,
+
+
+#window {
+        color: #ffffff;
+}
+
 #pulseaudio {
-        min-width: 50px;
-        color: @blue1;
+        color: #ffffff;
 }
 
-
-#cpu.critical,
-#memory.critical {
-        color: @red;
+#pulseaudio.muted {
+        color: #ffffff;
 }
 
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-        color: @red;
+#custom-arch {
+        color: #ffffff;
+        padding-left: 13px;
+        padding-right: 14px;
+}
+
+#custom-power {
+        color: #ffffff;
+        font-size: 14px;
+}
+
+#mpd {
+        color: #ffffff;
 }
