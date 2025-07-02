@@ -14,7 +14,7 @@ ICONS=(
 
 MENU_ITEMS=()
 for i in "${!DISPLAY_NAMES[@]}"; do
-        MENU_ITEMS+=("${ICONS[i]}:text:${DISPLAY_NAMES[i]}")
+        MENU_ITEMS+=("${ICONS[i]} :text:${DISPLAY_NAMES[i]}")
 done
 
 CHOICE=$(printf '%s\n' "${MENU_ITEMS[@]}" | wofi --show dmenu -n --conf ~/.config/wofi/power_menu)

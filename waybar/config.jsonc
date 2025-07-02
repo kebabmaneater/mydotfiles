@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "spacing": 0,
     "height": 0,
 
@@ -41,7 +41,7 @@
     "max-length": 30,
     "separate-outputs": false,
     "rewrite": {
-      "^.*( — Firefox| - Mozilla Firefox|Firefox)$": " Firefox",
+      "^.*( — Firefox| - Mozilla Firefox|Firefox|Firefox Nightly)$": " Firefox",
       "^.*~$": "   Kitty",
       "(.*) ": "   Empty"
     },
@@ -58,10 +58,11 @@
         "tooltip": false
     },
 
-    "clock": {
-        "format": "  {:%H.%M - %d.%m.%Y}",
-        "tooltip": false
-    },
+"clock": {
+    "format": "  {:%H.%M.%S - %d.%m.%Y}",
+    "tooltip": false,
+    "interval": 1
+},
 
     "custom/hyprsunset": {
         "interval": "once",

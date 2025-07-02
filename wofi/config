@@ -1,9 +1,9 @@
 [config]
 allow_images=true
-width=400
+width=1920
 show=drun
 prompt=Search
-height=400
+height=200
 term=kitty
 allow_markup=true
 print_command=true
@@ -12,3 +12,4 @@ columns=1
 no_actions=true
 gtk_dark=true
 dynamic_lines=true
+image_size=16
