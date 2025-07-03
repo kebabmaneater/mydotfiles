@@ -9,7 +9,8 @@
         "modules-left": [
                 "custom/arch",
                 "hyprland/workspaces",
-                "hyprland/window"
+                "hyprland/window",
+                "custom/spotify"
         ],
         "modules-center": [
                 "clock",
@@ -25,6 +26,16 @@
                 "network",
                 "pulseaudio"
         ],
+        "custom/spotify": {
+                "exec": "uv run ~/.config/waybar/modules/spotify/main.py",
+                "format": "  {}",
+                "return-type": "json",
+                "on-click": "playerctl play-pause",
+                "on-scroll-up": "playerctl next",
+                "on-scroll-down": "playerctl previous",
+                "max-length": 30,
+                "interval": 2
+        },
         "custom/arch": {
                 "format": "󰣇",
                 "tooltip": false,
