@@ -26,3 +26,11 @@ end
 function vlca
     bash /mnt/sdb/Videot/watch_all.sh
 end
+
+function yeet
+    yay -Runs
+end
+
+function fml
+    systemctl shutdown
+end

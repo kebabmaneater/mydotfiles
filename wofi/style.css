@@ -1,5 +1,9 @@
 @define-color blue1 #8fbcbb;
 
+* {
+        font-family: "JetBrains Mono"
+}
+
 window {
         margin: 0px;
         background-color: rgba(0, 0, 0, 0.5);

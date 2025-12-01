@@ -1,12 +1,5 @@
 return {
         -- add gruvbox
         { "sainnhe/gruvbox-material" },
-
-        -- Configure LazyVim to load gruvbox
-        {
-                "LazyVim/LazyVim",
-                opts = {
-                        colorscheme = "gruvbox-material",
-                },
-        },
+        { "https://github.com/sam4llis/nvim-tundra" },
 }

@@ -1,12 +1,12 @@
 #!/usr/bin/env fish
 
 # Define available options and their commands
-set -l options "wofi --show drun -n" "bash ~/.config/waybar/power_menu.sh" "bash ~/.config/wofi/wofi-calc.sh"
-set -l option_names drun power calc
+set -l options "wofi --show drun -n" "bash ~/.config/waybar/power_menu.sh" "bash ~/.config/wofi/wofi-calc.sh" "bash ~/.config/wofi/video-searcher.sh"
+set -l option_names drun power calc video_searcher
 
 # Check for argument
 if test (count $argv) -eq 0
-    echo "Usage: (basename (status --current-filename)) [drun|power|calc]"
+    echo "Usage: (basename (status --current-filename)) [drun|power|calc|video_searcher]"
     exit 1
 end
 

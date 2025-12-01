@@ -1,7 +1,7 @@
 * {
-        min-height: 0.7em;
+        min-height: 1.43em;
         min-width: 0;
-        font-family: "spleen 16x32";
+        font-family: "JetBrains Mono";
         font-size: 16px;
         font-weight: 500;
 }
@@ -42,10 +42,13 @@ window#waybar {
         color: #ffffff;
 }
 
+#custom-arch {
+        padding: 0.1em 2em;
+}
+
 #clock,
 #pulseaudio,
 #custom-hyprsunset,
-#custom-arch,
 #custom-power,
 #custom-spotify,
 #custom-cmus,
@@ -60,11 +63,10 @@ window#waybar {
 #tray,
 #memory,
 #window {
-        padding: 0.1em 0.6em;
+        padding: 0.3em 0.9em;
         border-radius: 0px;
         margin: 0px 0px;
         background: rgba(40, 50, 60, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #custom-menu:hover {
