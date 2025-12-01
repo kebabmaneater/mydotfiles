@@ -1,13 +1,13 @@
 {
-	"name": "example-snippets",
-	"contributes": {
-		"snippets": [
-			{
-				"language": [
-					"typescript"
-				],
-				"path": "./typescript.json"
-			}
-		]
-	}
+        "name": "example-snippets",
+        "contributes": {
+                "snippets": [
+                        {
+                                "language": [
+                                        "typescript"
+                                ],
+                                "path": "./typescript.json"
+                        }
+                ]
+        }
 }
