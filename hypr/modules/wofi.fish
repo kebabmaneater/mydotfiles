@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 # Define available options and their commands
-set -l options "wofi --show drun -n" "bash ~/.config/waybar/power_menu.sh" "bash ~/.config/wofi/wofi-calc.sh" "bash ~/.config/wofi/video-searcher.sh"
+set -l options "wofi --show drun -n" "bash ~/.config/wofi/power_menu.sh" "bash ~/.config/wofi/wofi-calc.sh" "bash ~/.config/wofi/video-searcher.sh"
 set -l option_names drun power calc video_searcher
 
 # Check for argument

@@ -50,10 +50,6 @@ RowLayout {
                         }
                     }
 
-                    if (display === regexMap[2].value + " — " + win.title) {
-                        display = win.title;
-                    }
-
                     if (display.length > 45) {
                         display = display.substring(0, 42);
                         display = display.trim(display);
@@ -68,7 +64,7 @@ RowLayout {
 
     Process {
         id: powerMenuProc
-        command: ["sh", "-c", "bash $HOME/.config/waybar/power_menu.sh"]
+        command: ["sh", "-c", "fish ~/.config/hypr/modules/wofi.fish power"]
     }
 
     Connections {
@@ -79,7 +75,7 @@ RowLayout {
     }
 
     Timer {
-        interval: 2000
+        interval: 10000
         onTriggered: {
             windowProc.running = true;
         }

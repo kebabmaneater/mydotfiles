@@ -49,7 +49,7 @@ PanelWindow {
     implicitHeight: 30
     color: root.colBg3
 
-    property string fontFamily: "JetBrainsMono Nerd Font"
+    property string fontFamily: "JetBrains Mono Nerd Font"
     property int fontSize: 14
 
     LeftBar {}
