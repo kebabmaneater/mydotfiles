@@ -20,9 +20,6 @@
 !nwg-look/*
 !nwg-look/
 !waybar/*
-!waybar/modules/*
-!waybar/modules/spotify/*
-!waybar/
 !wofi/*
 !wofi/
 !quickshell/*
