@@ -26,7 +26,7 @@ RowLayout {
 
     Process {
         id: pulseProc
-        command: ["sh", "-c", "pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | sed 's/%//'"]
+        command: ["sh", "-c", "pactl get-sink-volume alsa_output.pci-0000_01_00.1.hdmi-stereo | awk '{print $5}' | sed 's/%//'"]
         stdout: SplitParser {
             onRead: data => {
                 if (data && data.trim()) {
@@ -98,6 +98,13 @@ RowLayout {
         }
         Component.onCompleted: running = true
     }
+
+    Process {
+        id: setVolumeProc
+        property string volumeCmd: ""
+        command: ["sh", "-c", volumeCmd]
+    }
+
     Timer {
         interval: 1000
         running: true
@@ -175,6 +182,14 @@ RowLayout {
             anchors.fill: parent
             onClicked: {
                 pavuControl.running = true;
+            }
+            onWheel: {
+                // Adjust volume by 5% per wheel step
+                var direction = wheel.angleDelta.y > 0 ? "+" : "-";
+                var cmd = "pactl set-sink-volume alsa_output.pci-0000_01_00.1.hdmi-stereo " + direction + "1%";
+                setVolumeProc.volumeCmd = cmd;
+                setVolumeProc.running = true;
+                pulseProc.running = true;
             }
         }
     }
