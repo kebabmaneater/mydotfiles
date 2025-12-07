@@ -1,5 +1,7 @@
 *
 !.gitignore
+!nvim/lua/plugins/*
+!nvim/lua/*
 !nvim/*
 !nvim/
 !fish/config.fish
@@ -23,4 +25,5 @@
 !waybar/
 !wofi/*
 !wofi/
-
+!quickshell/*
+!quickshell/

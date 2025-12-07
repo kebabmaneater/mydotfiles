@@ -1,0 +1,36 @@
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[LOG] Cleaned old hyprpaper preloads (1), removing 8.3MB
+[LOG] Preloaded target /home/zerrox/Asiakirjat/wallpaper2.png in 445.01ms -> Pixel size: [7866, 3333]
+[LOG] Buffer created for target /home/zerrox/Asiakirjat/wallpaper2.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] hyprpaper socket started at /run/user/1000/hypr/967c3c7404d4fa00234e29c70df3e263386d2597_1764704614_1107907116/.hyprpaper.sock (fd: 5)
+[LOG] configure for HDMI-A-3
+[LOG] configure for HDMI-A-3
+[LOG] Image data for HDMI-A-3: /home/zerrox/Asiakirjat/wallpaper2.png at [-970.33, 0.00], scale: 0.32 (original image size: [7866, 3333])
+[LOG] Submitting viewport dest size 1920x1080 for 56118b380e50
+[LOG] handlePreferredScale: 1.00 for 56118b380e50
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[LOG] Cleaned old hyprpaper preloads (1), removing 8.3MB
+[LOG] Preloaded target /home/zerrox/Asiakirjat/wallpaper2.png in 440.61ms -> Pixel size: [7866, 3333]
+[LOG] Buffer created for target /home/zerrox/Asiakirjat/wallpaper2.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] hyprpaper socket started at /run/user/1000/hypr/967c3c7404d4fa00234e29c70df3e263386d2597_1764704614_1107907116/.hyprpaper.sock (fd: 5)
+[LOG] configure for HDMI-A-3
+[LOG] configure for HDMI-A-3
+[LOG] Image data for HDMI-A-3: /home/zerrox/Asiakirjat/wallpaper2.png at [-970.33, 0.00], scale: 0.32 (original image size: [7866, 3333])
+[LOG] Submitting viewport dest size 1920x1080 for 560031357e50
+[LOG] handlePreferredScale: 1.00 for 560031357e50
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[LOG] Cleaned old hyprpaper preloads (1), removing 8.3MB
+[LOG] Preloaded target /home/zerrox/Pictures/gowall/wallpaper2.png in 630.48ms -> Pixel size: [7866, 3333]
+[LOG] Buffer created for target /home/zerrox/Pictures/gowall/wallpaper2.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] hyprpaper socket started at /run/user/1000/hypr/967c3c7404d4fa00234e29c70df3e263386d2597_1764704614_1107907116/.hyprpaper.sock (fd: 4)
+[LOG] configure for HDMI-A-3
+[LOG] configure for HDMI-A-3
+[LOG] Image data for HDMI-A-3: /home/zerrox/Pictures/gowall/wallpaper2.png at [-970.33, 0.00], scale: 0.32 (original image size: [7866, 3333])
+[LOG] Submitting viewport dest size 1920x1080 for 56439480ef20
+[LOG] handlePreferredScale: 1.00 for 56439480ef20

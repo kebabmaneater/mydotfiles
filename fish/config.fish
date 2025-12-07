@@ -34,3 +34,7 @@ end
 function fml
     systemctl shutdown
 end
+
+function qmlls
+    qmlls6 -E
+end
