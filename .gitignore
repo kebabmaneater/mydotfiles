@@ -24,3 +24,10 @@
 !wofi/
 !quickshell/*
 !quickshell/
+!quickshell/mixer/*
+!quickshell/mixer/
+!quickshell/audio/*
+!quickshell/audio/
+!quickshell/power/*
+!quickshell/power/
+!quickshell/bar/*

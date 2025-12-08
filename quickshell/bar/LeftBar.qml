@@ -38,6 +38,10 @@ RowLayout {
                     {
                         pattern: /.*/,
                         value: " Empty"
+                    },
+                    {
+                        pattern: /(Steam|steam)$/i,
+                        value: " Steam"
                     }
                 ];
                 let display = "broken";
@@ -47,6 +51,16 @@ RowLayout {
                         if (regexMap[i].pattern.test(win.class)) {
                             display = regexMap[i].value + " — " + win.title;
                             break;
+                        }
+                    }
+
+                    if (display === regexMap[2].value + " — null") {
+                        display = regexMap[2].value;
+                    }
+
+                    if (display !== regexMap[2].value + " — null") {
+                        if (display === regexMap[2].value + " — " + win.title) {
+                            display = win.title;
                         }
                     }
 
@@ -60,11 +74,6 @@ RowLayout {
             }
         }
         Component.onCompleted: running = true
-    }
-
-    Process {
-        id: powerMenuProc
-        command: ["sh", "-c", "fish ~/.config/hypr/modules/wofi.fish power"]
     }
 
     Connections {
@@ -95,7 +104,7 @@ RowLayout {
             id: powerArea
             anchors.fill: parent
             onClicked: {
-                powerMenuProc.running = true;
+                root.powerVisible = !root.powerVisible;
             }
         }
     }

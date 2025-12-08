@@ -18,24 +18,10 @@ RowLayout {
     property var lastTx: 0
     property int memUsage: 0
 
-    property int pulseVolume: 0
-
     Item {
         Layout.fillWidth: true
     }
 
-    Process {
-        id: pulseProc
-        command: ["sh", "-c", "pactl get-sink-volume alsa_output.pci-0000_01_00.1.hdmi-stereo | awk '{print $5}' | sed 's/%//'"]
-        stdout: SplitParser {
-            onRead: data => {
-                if (data && data.trim()) {
-                    rightBar.pulseVolume = parseInt(data.trim());
-                }
-            }
-        }
-        Component.onCompleted: running = true
-    }
     Process {
         id: memProc
         command: ["sh", "-c", "free | grep Mem"]
@@ -50,11 +36,6 @@ RowLayout {
             }
         }
         Component.onCompleted: running = true
-    }
-
-    Process {
-        id: pavuControl
-        command: ["sh", "-c", "pavucontrol"]
     }
 
     Process {
@@ -169,7 +150,7 @@ RowLayout {
     }
 
     Text {
-        text: " " + rightBar.pulseVolume + "%"
+        text: " " + root.pulseVolume + "%"
         color: root.colBg11
         font {
             family: root.fontFamily
@@ -181,12 +162,12 @@ RowLayout {
             id: audioArea
             anchors.fill: parent
             onClicked: {
-                pavuControl.running = true;
+                root.mixerVisible = !root.mixerVisible;
             }
             onWheel: {
                 // Adjust volume by 5% per wheel step
                 var direction = wheel.angleDelta.y > 0 ? "+" : "-";
-                var cmd = "pactl set-sink-volume alsa_output.pci-0000_01_00.1.hdmi-stereo " + direction + "1%";
+                var cmd = "pactl set-sink-volume @DEFAULT_SINK@ " + direction + "1%";
                 setVolumeProc.volumeCmd = cmd;
                 setVolumeProc.running = true;
                 pulseProc.running = true;

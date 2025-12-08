@@ -4,8 +4,12 @@ import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
 import Quickshell.Io
+import "mixer"
+import "audio"
+import "power"
+import "bar"
 
-PanelWindow {
+Scope {
     id: root
 
     property color colBg1: "#1E1E2E"
@@ -35,24 +39,29 @@ PanelWindow {
     property color colFg13: "#89B4FA"
     property color colFg14: "#B4BEFE"
 
-    anchors {
-        top: true
-        left: true
-        right: true
-    }
-    aboveWindows: false
-    margins {
-        right: 200
-        left: 200
-        top: 6
-    }
-    implicitHeight: 30
-    color: root.colBg3
-
     property string fontFamily: "JetBrains Mono Nerd Font"
     property int fontSize: 14
 
-    LeftBar {}
-    CenterBar {}
-    RightBar {}
+    // GLOBAL VARIABLES (I know it's not good :(...)
+    property bool mixerVisible: false
+    property bool powerVisible: false
+
+    property int pulseVolume: 0
+    Process {
+        id: pulseProc
+        command: ["sh", "-c", "pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | sed 's/%//'"]
+        stdout: SplitParser {
+            onRead: data => {
+                if (data && data.trim()) {
+                    root.pulseVolume = parseInt(data.trim());
+                }
+            }
+        }
+        Component.onCompleted: running = true
+    }
+
+    VolumeOsd {}
+    Mixer {}
+    PowerMenu {}
+    Bar {}
 }
