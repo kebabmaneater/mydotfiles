@@ -33,7 +33,7 @@ Scope {
     // PanelWindow.visible could be set instead of using a loader, but using
     // a loader will reduce the memory overhead when the window isn't open.
     LazyLoader {
-        active: audioVolumeOsdScope.shouldShowOsd && !root.mixerVisible
+        active: audioVolumeOsdScope.shouldShowOsd
 
         PanelWindow {
             // Since the panel's screen is unset, it will be picked by the compositor
@@ -80,7 +80,7 @@ Scope {
                                 bottom: parent.bottom
                             }
 
-                            implicitWidth: parent.width * (Pipewire.defaultAudioSink?.audio.volume ?? 0)
+                            implicitWidth: parent.width * Pipewire.defaultAudioSink?.audio.volume ?? 0
                             radius: parent.radius
                             color: root.colBg12
                         }

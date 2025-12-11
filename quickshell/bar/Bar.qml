@@ -1,17 +1,20 @@
 import Quickshell
-import Quickshell.Wayland
-import Quickshell.Hyprland
 import QtQuick
-import QtQuick.Layouts
-import Quickshell.Io
+import "../mixer"
+import "../power"
 
 PanelWindow {
+    id: bar
+    property bool mixerVisible: false
+    property bool powerVisible: false
+    property int pulseVolume: 0
+
     anchors {
         top: true
         left: true
         right: true
     }
-    aboveWindows: false
+    aboveWindows: true
     margins {
         right: 200
         left: 200
@@ -23,4 +26,7 @@ PanelWindow {
     LeftBar {}
     CenterBar {}
     RightBar {}
+
+    Mixer {}
+    PowerMenu {}
 }

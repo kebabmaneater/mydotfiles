@@ -29,34 +29,18 @@ RowLayout {
     }
     anchors.centerIn: parent
 
+    SystemClock {
+        id: clock
+    }
+
     Text {
         id: clockText
-        text: formatClock()
+        text: Qt.formatDateTime(clock.date, "󰥔 HH.mm.ss - dd.MM.yyyy")
         color: root.colBg12
         font {
             family: root.fontFamily
             pixelSize: root.fontSize
             bold: true
-        }
-        function formatClock() {
-            var d = new Date();
-            var pad = function (n) {
-                return n < 10 ? "0" + n : n;
-            };
-            return "󰥔 " + pad(d.getHours()) + "." + pad(d.getMinutes()) + "." + pad(d.getSeconds()) + " - " + pad(d.getDate()) + "." + (d.getMonth() + 1) + "." + d.getFullYear();
-        }
-        Timer {
-            interval: 1000
-            running: true
-            repeat: true
-            onTriggered: clockText.text = formatClock()
-            function formatClock() {
-                var d = new Date();
-                var pad = function (n) {
-                    return n < 10 ? "0" + n : n;
-                };
-                return "󰥔 " + pad(d.getHours()) + "." + pad(d.getMinutes()) + "." + pad(d.getSeconds()) + " - " + pad(d.getDate()) + "." + (d.getMonth() + 1) + "." + d.getFullYear();
-            }
         }
     }
 

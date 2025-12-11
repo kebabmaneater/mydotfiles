@@ -2,11 +2,22 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell
+import Quickshell.Hyprland
 import Quickshell.Services.Pipewire
 
 Scope {
+    GlobalShortcut {
+        id: stuff
+        description: "volume"
+        name: "volume"
+        appid: "quickshell"
+        onReleased: {
+            bar.mixerVisible = !bar.mixerVisible;
+        }
+    }
+
     LazyLoader {
-        active: root.mixerVisible
+        active: bar.mixerVisible
 
         PanelWindow {
             color: root.colBg3
@@ -22,7 +33,7 @@ Scope {
 
             margins {
                 right: 200
-                left: 1300
+                left: 1323
                 top: 2
             }
 
@@ -30,7 +41,7 @@ Scope {
                 id: columnLayout
                 anchors.margins: 10
                 Item {
-                    implicitHeight: 5
+                    implicitHeight: 3
                     Layout.fillWidth: true
                 }
 
@@ -59,7 +70,7 @@ Scope {
                 }
 
                 Item {
-                    implicitHeight: 5
+                    implicitHeight: 3
                     Layout.fillWidth: true
                 }
             }

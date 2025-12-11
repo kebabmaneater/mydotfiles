@@ -1,13 +1,13 @@
 import Quickshell
+import QtQuick.Controls
 import Quickshell.Wayland
 import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
 import Quickshell.Io
-import "mixer"
 import "audio"
-import "power"
 import "bar"
+import "searcher"
 
 Scope {
     id: root
@@ -42,26 +42,7 @@ Scope {
     property string fontFamily: "JetBrains Mono Nerd Font"
     property int fontSize: 14
 
-    // GLOBAL VARIABLES (I know it's not good :(...)
-    property bool mixerVisible: false
-    property bool powerVisible: false
-
-    property int pulseVolume: 0
-    Process {
-        id: pulseProc
-        command: ["sh", "-c", "pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | sed 's/%//'"]
-        stdout: SplitParser {
-            onRead: data => {
-                if (data && data.trim()) {
-                    root.pulseVolume = parseInt(data.trim());
-                }
-            }
-        }
-        Component.onCompleted: running = true
-    }
-
-    VolumeOsd {}
-    Mixer {}
-    PowerMenu {}
     Bar {}
+    VolumeOsd {}
+    Search {}
 }

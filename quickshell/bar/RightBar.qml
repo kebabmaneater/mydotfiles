@@ -86,6 +86,19 @@ RowLayout {
         command: ["sh", "-c", volumeCmd]
     }
 
+    Process {
+        id: pulseProc
+        command: ["sh", "-c", "pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | sed 's/%//'"]
+        stdout: SplitParser {
+            onRead: data => {
+                if (data && data.trim()) {
+                    bar.pulseVolume = parseInt(data.trim());
+                }
+            }
+        }
+        Component.onCompleted: running = true
+    }
+
     Timer {
         interval: 1000
         running: true
@@ -124,7 +137,7 @@ RowLayout {
 
     Text {
         text: " " + rightBar.memUsage + "%"
-        color: root.colBg12
+        color: root.colBg10
         font.pixelSize: root.fontSize
         font.family: root.fontFamily
         font.bold: true
@@ -150,8 +163,8 @@ RowLayout {
     }
 
     Text {
-        text: " " + root.pulseVolume + "%"
-        color: root.colBg11
+        text: " " + bar.pulseVolume + "%"
+        color: root.colBg12
         font {
             family: root.fontFamily
             pixelSize: root.fontSize
@@ -162,7 +175,7 @@ RowLayout {
             id: audioArea
             anchors.fill: parent
             onClicked: {
-                root.mixerVisible = !root.mixerVisible;
+                bar.mixerVisible = !bar.mixerVisible;
             }
             onWheel: {
                 // Adjust volume by 5% per wheel step

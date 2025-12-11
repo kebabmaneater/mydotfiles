@@ -15,7 +15,6 @@ RowLayout {
         command: ["sh", "-c", "hyprctl activewindow -j | jq -r '{class, title} | @base64'"]
         stdout: SplitParser {
             onRead: data => {
-                // Decode base64 and parse JSON
                 function decodeBase64(str) {
                     try {
                         return JSON.parse(Qt.atob(str));
@@ -54,20 +53,8 @@ RowLayout {
                         }
                     }
 
-                    if (display === regexMap[2].value + " — null") {
-                        display = regexMap[2].value;
-                    }
-
-                    if (display !== regexMap[2].value + " — null") {
-                        if (display === regexMap[2].value + " — " + win.title) {
-                            display = win.title;
-                        }
-                    }
-
                     if (display.length > 45) {
-                        display = display.substring(0, 42);
-                        display = display.trim(display);
-                        display += "...";
+                        display = display.substring(0, 42).trim() + "...";
                     }
                 }
                 leftBar.activeWindow = display;
@@ -104,7 +91,7 @@ RowLayout {
             id: powerArea
             anchors.fill: parent
             onClicked: {
-                root.powerVisible = !root.powerVisible;
+                bar.powerVisible = !bar.powerVisible;
             }
         }
     }

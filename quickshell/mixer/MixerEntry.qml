@@ -28,7 +28,12 @@ ColumnLayout {
                 }
                 return media != undefined ? `${app} - ${media}` : app;
             }
-            color: root.colBg12
+            font {
+                family: root.fontFamily
+                pixelSize: root.fontSize
+                bold: true
+            }
+            color: root.colBg10
         }
 
         Image {
@@ -57,7 +62,7 @@ ColumnLayout {
         Slider {
             id: control
             value: node.audio.volume
-            implicitWidth: 340
+            implicitWidth: 320
             onValueChanged: {
                 node.audio.volume = value;
                 pulseProc.running = true;
@@ -70,14 +75,12 @@ ColumnLayout {
                 implicitHeight: 4
                 width: control.availableWidth
                 height: implicitHeight
-                radius: 2
                 color: root.colBg5
 
                 Rectangle {
                     width: control.visualPosition * parent.width
                     height: parent.height
-                    color: root.colBg12
-                    radius: 2
+                    color: root.colBg10
                 }
             }
 
@@ -92,7 +95,12 @@ ColumnLayout {
         Label {
             Layout.preferredWidth: 50
             text: `${Math.floor(node.audio.volume * 100)}%`
-            color: root.colBg12
+            color: root.colBg10
+            font {
+                family: root.fontFamily
+                pixelSize: root.fontSize
+                bold: true
+            }
         }
     }
 }
