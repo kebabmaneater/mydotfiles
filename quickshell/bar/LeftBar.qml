@@ -53,8 +53,8 @@ RowLayout {
                         }
                     }
 
-                    if (display.length > 45) {
-                        display = display.substring(0, 42).trim() + "...";
+                    if (display.length > 42) {
+                        display = display.substring(0, 39).trim() + "...";
                     }
                 }
                 leftBar.activeWindow = display;

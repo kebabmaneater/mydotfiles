@@ -29,7 +29,7 @@ Scope {
         PanelWindow {
             color: root.colBg3
             implicitWidth: 200
-            implicitHeight: 130
+            implicitHeight: 150
             exclusiveZone: 0
 
             anchors {
@@ -56,10 +56,10 @@ Scope {
                     }
 
                     Repeater {
-                        model: 5
+                        model: 6
 
                         Text {
-                            text: " " + [" Suspend", " Reboot", " Power Off", " Lock", "󰍃 Logout"][index]
+                            text: " " + [" Suspend", " Reboot", " Power Off", "󰚰 Update & poweroff", " Lock", "󰍃 Logout"][index]
                             color: root.colBg10
                             font {
                                 family: root.fontFamily
@@ -71,7 +71,7 @@ Scope {
                                 anchors.fill: parent
                                 onClicked: {
                                     bar.powerVisible = false;
-                                    powerMenuProc.powerMenuCmd = ["systemctl suspend", "systemctl reboot", "systemctl poweroff", "loginctl lock-session", "hyprctl dispatch exit"][index];
+                                    powerMenuProc.powerMenuCmd = ["systemctl suspend", "systemctl reboot", "systemctl poweroff", "loginctl lock-session", "sudo pacman -Syu && systemctl poweroff", "hyprctl dispatch exit"][index];
                                     powerMenuProc.running = true;
                                 }
                             }
